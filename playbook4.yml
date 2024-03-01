@@ -1,0 +1,14 @@
+---
+- name: Create file and store some data in it
+  hosts: all
+  tasks:
+    - name: Create a file
+      file:
+        name: /tmp/file1
+        state: touch
+    - name: Store some data in the file
+      copy: 
+        content: "spltrainings"
+        dest: /tmp/file1
+
+...
