@@ -1,0 +1,16 @@
+---
+- name: Implementing when conditions
+  hosts: all 
+  vars: 
+    - a: 20
+  tasks: 
+    - name: Create user
+      user: 
+        name: Ramana
+        password: spltrainings
+      when: a == 10
+
+...       
+
+
+
