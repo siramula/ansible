@@ -1,0 +1,13 @@
+---
+- name: Install tree based on the linux flavour
+  hosts: all
+  tasks: 
+    - name: Install tree on ubuntu using apt
+      apt: 
+        name: tree 
+        state: present
+        update_cache: yes
+      when: ansible_distribution == "ubuntu"
+...        
+
+
